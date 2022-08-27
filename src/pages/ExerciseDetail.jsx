@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
-
 import { exerciseOptions, fetchData, youtubeOptions } from '../utils/fetchData';
 import Detail from '../components/Detail';
 import ExerciseVideos from '../components/ExerciseVideos';
 import SimilarExercises from '../components/SimilarExercises';
 
 const ExerciseDetail = () => {
-  const [exerciseDetail, setExerciseDetail] = useState({});
-  const [exerciseVideos, setExerciseVideos] = useState([]);
-  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
-  const [equipmentExercises, setEquipmentExercises] = useState([]);
+  const [exerciseDetail, setExerciseDetail] = React.useState({});
+  const [exerciseVideos, setExerciseVideos] = React.useState([]);
+  const [targetMuscleExercises, setTargetMuscleExercises] = React.useState([]);
+  const [equipmentExercises, setEquipmentExercises] = React.useState([]);
   const { id } = useParams();
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     const fetchExercisesData = async () => {
