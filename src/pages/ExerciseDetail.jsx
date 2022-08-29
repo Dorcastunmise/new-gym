@@ -13,6 +13,8 @@ const ExerciseDetail = () => {
   const [equipmentExercises, setEquipmentExercises] = React.useState([]);
   const { id } = useParams();
 
+
+
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
